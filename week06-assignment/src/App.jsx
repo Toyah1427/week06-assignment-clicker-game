@@ -24,18 +24,31 @@ export default function App() {
   
   function buyUpgrade() {
     setCps(cps + 10);
+    setPickles((currentPickles) => {
+      return currentPickles - 15;
+    });
+    
   }
 
   function pickleJar() {
     setCps(cps + 20);
+    setPickles((currentPickles) => {
+      return currentPickles - 30;
+    });
   }
 
   function spicyPickle() {
     setCps(cps + 100);
+    setPickles((currentPickles) => {
+      return currentPickles - 150;
+    });
   }
 
   function pickleJuice() {
     setCps(cps + 200);
+    setPickles((currentPickles) => {
+      return currentPickles - 250;
+    });
   }
 
   return (
